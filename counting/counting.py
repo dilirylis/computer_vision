@@ -28,10 +28,10 @@ labels = label(eros)
 quantity_top = np.amax(labels) - quantity_full
 print(f'Сумма горизонтальных прямоугольников с вырезом сверху: {quantity_top}')
 
-footprint_bottom = [[1, 1, 1, 1, 1, 1], 
-                    [1, 1, 1, 1, 1, 1], 
-                    [1, 0, 0, 0, 1, 1],
-                    [1, 0, 0, 0, 1, 1]]
+footprint_bottom = [[1, 1, 1, 1, 1], 
+                    [1, 1, 1, 1, 1], 
+                    [1, 0, 0, 0, 1],
+                    [1, 0, 0, 0, 1]]
 
 eros = binary_erosion(image, footprint_bottom)
 labels = label(eros)
